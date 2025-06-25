@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../HTML/index.html">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn">Project</a>
+                    <div class="dropdown-content">
+                    <a href="../HTML/projects.html">Web Development</a>
+                    <a href="../HTML/projects.html">UX/UI</a>
+                    </div>
+                </li>
+                <li><a href="../HTML/aboutMe.html">About me</a></li>
+                <li><a href="">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="info_box">
+        <div id="info_container">
+            <h1>Hi,</h1>
+            <h2>I'm Ruqaiya Roomi!</h2>
+            <p> I'm an IT student with a passion for web development and all things tech. I love bringing ideas to life through clean, responsive, and user-friendly websites. Whether it’s front-end design or diving into code, I enjoy solving problems and constantly learning new tools and technologies to sharpen my skills. Welcome to my portfolio—feel free to explore my work and see 
+                what I’ve been building!
+            </p>
+            <a href="../HTML/aboutMe.html"><button id="AboutMe">About Me</button></a>
+            <a href=""><button id="Resume">Download Resume</button></a>
+        </div>
+        <div id="index_image">
+                
+        </div>
+    </section>
+    <footer>
+        <h3>Contacts</h3>
+        
+    </footer>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const fadeElements = document.querySelectorAll('.fade-in-up');
+  
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target); // run only once
+          }
+        });
+      }, { threshold: 0.1 });
+  
+      fadeElements.forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+  
+</html>

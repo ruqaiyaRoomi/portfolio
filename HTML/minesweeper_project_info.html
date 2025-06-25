@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../HTML/index.html">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn">Project</a>
+                    <div class="dropdown-content">
+                    <a href="../HTML/projects.html">Web Development</a>
+                    <a href="../HTML/projects.html">UX/UI</a>
+                    </div>
+                </li>
+                <li><a href="../HTML/aboutMe.html">About me</a></li>
+                <li><a href="">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="project-detail">
+  <div class="project-description">
+    <h2>Project Title</h2>
+    <p>This is where the description of the project goes. Talk about the tools you used, challenges, and what you learned.</p>
+    <ul>
+      <li>Tech: HTML, CSS, JavaScript</li>
+      <li>Role: Frontend Developer</li>
+    </ul>
+  </div>
+
+  <div class="project-slider">
+    <div class="slides">
+      <img src="../images/minesweeper_homepage.png" class="slide" alt="homepage">
+      <img src="../images/minesweeper_board.png" class="slide" alt="game board">
+      <img src="../images/minesweeper_rules.png" class="slide" alt="Rules">
+       <img src="../images/minesweeper_signuo.png" class="slide" alt="Sign up">
+      <img src="../images/minesweeper_login.png" class="slide" alt="login">
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+</div>
+
+</body>
+<script>
+  const slides = document.querySelector('.slides');
+  const slideImages = document.querySelectorAll('.slide');
+  let currentIndex = 0;
+
+  document.querySelector('.next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slideImages.length;
+    updateSlider();
+  });
+
+  document.querySelector('.prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slideImages.length) % slideImages.length;
+    updateSlider();
+  });
+
+  function updateSlider() {
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+</script>
+</html>
