@@ -9,38 +9,39 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="../HTML/index.html">Home</a></li>
-                <li class="dropdown">
-                    <a class="dropbtn">Project</a>
-                    <div class="dropdown-content">
-                    <a href="../HTML/projects.html">Web Development</a>
-                    <a href="../HTML/projects.html">UX/UI</a>
-                    </div>
-                </li>
-                <li><a href="../HTML/aboutMe.html">About me</a></li>
-                <li><a href="">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
+     <nav>
+    <div class="logo">Ruqaiya<span> Roomi</span></div>
+    <ul>
+      <li><a href="../HTML/index.html">Home</a></li>
+      <li><a onclick="on()">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="../Files/Ruqaiya_Roomi_CV.pdf" download>Resume</a></li>
+    </ul>
+  </nav>
+  </header>
+
+
+  <div id="popUp_overlay">
+    <div id="popUp">
+        <button onclick="off()"> &#10006; </button>
+        <h2>Coming Soon!</h2>
+        <h3>Idk when but soon </h3>
+    </div>
+  </div>
 <div class="project-detail">
   <div class="project-description">
-    <h2>Project Title</h2>
-    <p>This is where the description of the project goes. Talk about the tools you used, challenges, and what you learned.</p>
-    <ul>
-      <li>Tech: HTML, CSS, JavaScript</li>
-      <li>Role: Frontend Developer</li>
-    </ul>
+    <h2>Midnight Noir</h2>
+    <p>Midnight Noir is a two-page coffee shop website built with HTML, CSS, and JavaScript as part of a university coursework project. It includes a homepage and a menu page, structured with semantic HTML and styled for clarity and usability.
+
+The project focused on building a responsive layout and ensuring smooth user interaction using core web technologies without external frameworks. Through this work, I gained hands-on experience in frontend structure, page layout, and basic interactivity.</p>
+
   </div>
 
   <div class="project-slider">
     <div class="slides">
-      <img src="../images/minesweeper_homepage.png" class="slide" alt="homepage">
-      <img src="../images/minesweeper_board.png" class="slide" alt="game board">
-      <img src="../images/minesweeper_rules.png" class="slide" alt="Rules">
-       <img src="../images/minesweeper_signuo.png" class="slide" alt="Sign up">
-      <img src="../images/minesweeper_login.png" class="slide" alt="login">
+      <img src="../images/MidnightNoir_homepage.png" class="slide" alt="homepage">
+      <img src="../images/MidnightNoir_Menu.png" class="slide" alt="menu">
+      
     </div>
     <button class="prev">&#10094;</button>
     <button class="next">&#10095;</button>
@@ -66,5 +67,15 @@
   function updateSlider() {
     slides.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
+
+  
+function on() {
+  document.getElementById("popUp_overlay").style.display = "flex";
+}
+
+function off() {
+  document.getElementById("popUp_overlay").style.display = "none";
+}
+
 </script>
 </html>

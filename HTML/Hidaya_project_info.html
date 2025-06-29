@@ -5,13 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    
   <header>
      <nav>
     <div class="logo">Ruqaiya<span> Roomi</span></div>
@@ -24,7 +20,7 @@
   </nav>
   </header>
 
-  
+
   <div id="popUp_overlay">
     <div id="popUp">
         <button onclick="off()"> &#10006; </button>
@@ -36,21 +32,23 @@
 
 <div class="project-detail">
   <div class="project-description">
-    <h2>Social Networking Website (SPA)</h2>
-    <p>This is where the description of the project goes.</p>
-    <ul>
-      <li>Tech: HTML, CSS, JavaScript</li>
-      <li>Role: Frontend Developer</li>
-    </ul>
+    <h2>Hidaya (Work In Progress)</h2>
+    <p>Hidaya is a personal project aimed at creating a modern, user-friendly Islamic platform that provides access to the Quran, Hadith collections, 
+      Duas, and Tafsir. The app is designed with personalized features 
+      like a prayer tracker, Ramadan tools, and user reflections. 
+      It includes AI-powered search and suggestions to help users explore Islamic content with ease and relevance.
+The goal is to support spiritual growth with thoughtful design, accessible language, and a calm visual aesthetic that blends traditional values with modern web practices.</p>
+
+    <a href="../Files/Hidaya_Figma_Mockup.docx" download class="btn">Download Figma Mockup</a>
   </div>
 
   <div class="project-slider">
     <div class="slides">
-      <img src="../images/" class="slide" alt="homepage">
-      <img src="" class="slide" alt="game board">
-      <img src="" class="slide" alt="Rules">
-       <img src="" class="slide" alt="Sign up">
-      <img src="" class="slide" alt="login">
+      <img src="../images/homepage_hero.png" class="slide" alt="homepage">
+      <img src="../images/homepage_duas.png" class="slide" alt="game board">
+      <img src="../images/homepage_surah.png" class="slide" alt="homepage">
+      <img src="../images/homepage_hadith.png" class="slide" alt="game board">
+      
     </div>
     <button class="prev">&#10094;</button>
     <button class="next">&#10095;</button>
@@ -77,12 +75,14 @@
     slides.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
 
-  function on() {
+  
+function on() {
   document.getElementById("popUp_overlay").style.display = "flex";
 }
 
 function off() {
   document.getElementById("popUp_overlay").style.display = "none";
 }
+
 </script>
 </html>

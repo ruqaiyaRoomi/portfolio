@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../CSS/pop_up.css" />
+    <title>Document</title>
+</head>
+<body>
+  <div id="popUp_overlay">
+    <div id="popUp">
+        <button onclick="on()"> &#10006; </button>
+        <h2>Coming Soon!</h2>
+        <h3>Idk when but soon</h3>
+    </div>
+  </div>
+</body>
+
+<script>
+    function on() {
+  document.getElementById("popUp_overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("popUp_overlay").style.display = "none";
+}
+</script>
+</html>

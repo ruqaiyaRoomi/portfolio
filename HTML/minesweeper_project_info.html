@@ -5,32 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../HTML/index.html">Home</a></li>
-                <li class="dropdown">
-                    <a class="dropbtn">Project</a>
-                    <div class="dropdown-content">
-                    <a href="../HTML/projects.html">Web Development</a>
-                    <a href="../HTML/projects.html">UX/UI</a>
-                    </div>
-                </li>
-                <li><a href="../HTML/aboutMe.html">About me</a></li>
-                <li><a href="">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
+   <header>
+     <nav>
+    <div class="logo">Ruqaiya<span> Roomi</span></div>
+    <ul>
+      <li><a href="../HTML/index.html">Home</a></li>
+      <li><a onclick="on()">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="../Files/Ruqaiya_Roomi_CV.pdf" download>Resume</a></li>
+    </ul>
+  </nav>
+  </header>
+
+
+  <div id="popUp_overlay">
+    <div id="popUp">
+        <button onclick="off()"> &#10006; </button>
+        <h2>Coming Soon!</h2>
+        <h3>Idk when but soon </h3>
+    </div>
+  </div>
 <div class="project-detail">
   <div class="project-description">
-    <h2>Project Title</h2>
-    <p>This is where the description of the project goes. Talk about the tools you used, challenges, and what you learned.</p>
+    <h2>Minesweeper</h2>
+    <p>A fully functional web-based implementation of the classic Minesweeper game, developed using HTML, CSS, and JavaScript. The game features a clean interface and interactive gameplay mechanics, 
+        including real-time win/loss detection and tile-reveal logic.
+        User credentials (name and password) and high scores are securely stored using the browser’s localStorage, 
+        enabling persistent player data across sessions. 
+        Built as part of a coursework assignment, 
+        this project enhanced my skills in frontend development, 
+        DOM manipulation, 
+        and state management without external libraries.</p>
     <ul>
-      <li>Tech: HTML, CSS, JavaScript</li>
-      <li>Role: Frontend Developer</li>
+      <li>Tech stack: HTML, CSS, JavaScript</li>
     </ul>
   </div>
 
@@ -66,5 +79,15 @@
   function updateSlider() {
     slides.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
+
+  
+function on() {
+  document.getElementById("popUp_overlay").style.display = "flex";
+}
+
+function off() {
+  document.getElementById("popUp_overlay").style.display = "none";
+}
+
 </script>
 </html>

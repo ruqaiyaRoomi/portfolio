@@ -11,33 +11,25 @@
 </head>
 
 <body>
-    
-  <header>
-     <nav>
-    <div class="logo">Ruqaiya<span> Roomi</span></div>
-    <ul>
-      <li><a href="../HTML/index.html">Home</a></li>
-      <li><a onclick="on()">Projects</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="../Files/Ruqaiya_Roomi_CV.pdf" download>Resume</a></li>
-    </ul>
-  </nav>
-  </header>
-
-  
-  <div id="popUp_overlay">
-    <div id="popUp">
-        <button onclick="off()"> &#10006; </button>
-        <h2>Coming Soon!</h2>
-        <h3>Idk when but soon </h3>
-    </div>
-  </div>
-
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../HTML/index.html">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn">Project</a>
+                    <div class="dropdown-content">
+                    <a href="../HTML/projects.html">Web Development</a>
+                    <a href="../HTML/projects.html">UX/UI</a>
+                    </div>
+                </li>
+                <li><a href="">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
 <div class="project-detail">
   <div class="project-description">
-    <h2>Social Networking Website (SPA)</h2>
-    <p>This is where the description of the project goes.</p>
+    <h2>Project Title</h2>
+    <p>This is where the description of the project goes. Talk about the tools you used, challenges, and what you learned.</p>
     <ul>
       <li>Tech: HTML, CSS, JavaScript</li>
       <li>Role: Frontend Developer</li>
@@ -46,7 +38,7 @@
 
   <div class="project-slider">
     <div class="slides">
-      <img src="../images/" class="slide" alt="homepage">
+      <img src="" class="slide" alt="homepage">
       <img src="" class="slide" alt="game board">
       <img src="" class="slide" alt="Rules">
        <img src="" class="slide" alt="Sign up">
@@ -76,13 +68,5 @@
   function updateSlider() {
     slides.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
-
-  function on() {
-  document.getElementById("popUp_overlay").style.display = "flex";
-}
-
-function off() {
-  document.getElementById("popUp_overlay").style.display = "none";
-}
 </script>
 </html>
